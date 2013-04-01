@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>abulka</groupId>
+  <artifactId>Teddy</artifactId>
+  <packaging>war</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>Teddy</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+  	<spring.version>3.2.2.RELEASE</spring.version>
+  	<junit.version>4.11</junit.version>
+  	<tomcat.version>7.0.37</tomcat.version>
+  	<jdk.version>1.7</jdk.version>
+  </properties>
+  
+  <dependencies>
+  
+  <!-- Spring dependencies -->
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-core</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-web</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-webmvc</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-test</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    
+    <!-- JUnit -->
+    <dependency>
+    	<groupId>junit</groupId>
+    	<artifactId>junit</artifactId>
+    	<version>${junit.version}</version>
+    </dependency>
+    
+    <!-- Tomcat -->
+    <dependency>
+    	<groupId>org.apache.tomcat</groupId>
+    	<artifactId>tomcat-servlet-api</artifactId>
+    	<version>${tomcat.version}</version>
+    </dependency>
+    
+  </dependencies>  
+  
+  <build>
+    <finalName>Teddy</finalName>
+    <plugins>
+	    <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-compiler-plugin</artifactId>
+	        <version>3.0</version>
+	        <configuration>
+	           <source>${jdk.version}</source>
+	           <target>${jdk.version}</target>
+	        </configuration>
+		</plugin>
+	</plugins>
+  </build>
+</project>
